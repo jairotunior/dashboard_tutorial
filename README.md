@@ -1,12 +1,13 @@
 # Dashboard of Economic Data Analysis
 
-This is a custom implementation of Trading environment in Gym Toolkit. The idea is create an environment in Gym that let implement any state-of-the-art algorithm of Deep Reinforcement Learning.
 This dashboard integrate different economic sources letting you add the desired time serie to be analysis.
 
 The data sources integrated are:
 
 * [Federal Reserve](https://fred.stlouisfed.org) - Economic Research from Federal Reserve of St. Louis
 * [Nasdaq Data Link](https://data.nasdaq.com) - A premier source for financial, economic and alternative datasets.
+
+Additonally, you could integrate data series from CSV Files.
 
 ## Screenshots
 
@@ -24,7 +25,7 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 python -m venv env
 ```
-2. Copy the repositiory https://github.com/jairotunior/economic_data.git
+2. Copy the repositiory https://github.com/jairotunior/dashboard_tutorial.git
 3. Install the dependencies
 
 ```
@@ -32,7 +33,7 @@ pip install -r requirements.txt
 ```
 4. Now run the dashboard with:
 ```
-python another_layout.py
+python run_dashboard.py
 ```
 
 

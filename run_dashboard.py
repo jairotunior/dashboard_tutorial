@@ -13,7 +13,6 @@ if __name__ == '__main__':
 
     BASE_DIR = Path(__file__).resolve().parent
 
-    # ************************ Global Variables ***************************
     ANALYSIS_PATH = os.path.join(BASE_DIR, 'dashboards')
 
     if not os.path.exists(ANALYSIS_PATH):
@@ -37,7 +36,7 @@ if __name__ == '__main__':
     manager.transformers.register(percentage_change_from_year_transform)
 
 
-    # ******************* Register Sources ******************************
+    # ******************* Create Source Managers ******************************
     fred_credentials = os.path.join(BASE_DIR, "api_fred.txt")
     fred_source = FREDSource(fred_credentials=fred_credentials)
     quandl_source = QuandlSource(api_key="4dvrfm6eBSwRSxwBP1Jx")
@@ -46,16 +45,14 @@ if __name__ == '__main__':
     file_source_dir = os.path.join(BASE_DIR, "datasets", 'yields')
     file_source = FileSource(dir=file_source_dir)
 
-    # ********************** Create Managers ****************************
     manager.sources.register(fred_source)
     manager.sources.register(quandl_source)
     manager.sources.register(file_source)
 
     manager.load()
 
-
     # ******************************************** Create Figures *************************************
-    logging.info("[+] Renderizando informacion...")
+    logging.info("[+] Render dashboards...")
 
     dashboard_view = DashboardView(title="Dashboard", manager=manager)
 
