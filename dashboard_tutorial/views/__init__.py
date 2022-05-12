@@ -1,0 +1,3 @@
+from dashboard_tutorial.views.series_view import SeriesView
+from dashboard_tutorial.views.analysis_view import AnalysisView
+from dashboard_tutorial.views.dashboard_view import DashboardView
