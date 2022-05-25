@@ -134,8 +134,6 @@ class QuandlSource(Source):
         df = quandl.get(quandl_id)
         df.index.name = 'date'
 
-        print(df.columns)
-
         if columns:
             for c in columns:
                 column_name = c['name']
@@ -151,8 +149,6 @@ class QuandlSource(Source):
 
         if rename_column:
             df = df.rename(columns={serie_selected['quandl_column']: rename_column})
-
-        #return df
 
         if re.search('Daily*', serie_selected['frequency']):
             # min_date = df.index.min()
