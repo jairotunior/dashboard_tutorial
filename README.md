@@ -31,7 +31,9 @@ python -m venv env
 ```
 pip install -r requirements.txt
 ```
-4. Now run the dashboard with:
+4. Get the API Key from Economic Research of Federal Reserve of St. Louis (https://fred.stlouisfed.org) and save the API Key in a file called 'api_fred.txt' in the root of the project.
+5. Get the API Key from Nasdaq Data Link (https://data.nasdaq.com/tools/api) and put the API KEY in the variable quandl_api_key in run_dashboard.py file.
+6. Now run the dashboard with:
 ```
 python run_dashboard.py
 ```
